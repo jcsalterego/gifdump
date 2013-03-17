@@ -10,6 +10,8 @@ typedef struct gif gif;
 #include <stdlib.h>
 #include <string.h>
 
+#include "stream.h"
+
 struct gif {
   bool valid;
   char *signature;
@@ -33,8 +35,5 @@ void gif_init (gif *self);
 void gif_dump (gif *self);
 void gif_dump_txt (gif *self);
 gif *gif_from_file (FILE *fh);
-
-uint16_t read_uint16 (char *data);
-uint8_t read_uint8 (char *data);
 
 #endif
