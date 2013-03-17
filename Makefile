@@ -10,4 +10,4 @@ gifdump: gifdump.o gif.o
 %.o: %.cc
 	$(CC) -c $(CFLAGS) $< -o $@
 clean:
-	rm -rf *~ \#*\# *.dSYM/ $(EXE)
+	rm -rf *.o *~ \#*\# *.dSYM/ $(EXE)
